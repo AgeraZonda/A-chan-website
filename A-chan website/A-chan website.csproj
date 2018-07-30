@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C8C6A8C-97FA-4BAB-8ECF-748D75D655E3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>A_chan_website</RootNamespace>
+    <AssemblyName>A-chan website</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AChanDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AChanDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AChanDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AChanDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AChanDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AChanDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChiTietHoaDon.cs">
+      <DependentUpon>AChanDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HoaDon.cs">
+      <DependentUpon>AChanDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\KhachHang.cs">
+      <DependentUpon>AChanDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SanPham.cs">
+      <DependentUpon>AChanDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>AChanDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ThongTinCuaHang.cs">
+      <DependentUpon>AChanDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\a58f0e4f933b42a9309fd3dd2884c606.jpg" />
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="dist\css\edit.css" />
+    <Content Include="dist\css\flat-ui.css" />
+    <Content Include="dist\css\flat-ui.min.css" />
+    <Content Include="dist\css\vendor\bootstrap.min.css" />
+    <Content Include="dist\css\vendor\productcard.css" />
+    <Content Include="dist\favicon.ico" />
+    <Content Include="dist\fonts\glyphicons\flat-ui-pro-icons-regular.svg" />
+    <Content Include="dist\fonts\lato\lato-black.svg" />
+    <Content Include="dist\fonts\lato\lato-bold.svg" />
+    <Content Include="dist\fonts\lato\lato-bolditalic.svg" />
+    <Content Include="dist\fonts\lato\lato-italic.svg" />
+    <Content Include="dist\fonts\lato\lato-light.svg" />
+    <Content Include="dist\fonts\lato\lato-regular.svg" />
+    <Content Include="dist\images\28168654_816042495259973_4101922012317719333_n.jpg" />
+    <Content Include="dist\images\carousel\image-01.jpg" />
+    <Content Include="dist\images\carousel\image-02.jpg" />
+    <Content Include="dist\images\carousel\image-03.jpg" />
+    <Content Include="dist\images\exaple-image.jpg" />
+    <Content Include="dist\images\icons\android.svg" />
+    <Content Include="dist\images\icons\android1.svg" />
+    <Content Include="dist\images\icons\app-store.svg" />
+    <Content Include="dist\images\icons\arrow.svg" />
+    <Content Include="dist\images\icons\art.svg" />
+    <Content Include="dist\images\icons\bag.svg" />
+    <Content Include="dist\images\icons\basket.svg" />
+    <Content Include="dist\images\icons\book.svg" />
+    <Content Include="dist\images\icons\bowling.svg" />
+    <Content Include="dist\images\icons\box.svg" />
+    <Content Include="dist\images\icons\brush.svg" />
+    <Content Include="dist\images\icons\building.svg" />
+    <Content Include="dist\images\icons\bulb.svg" />
+    <Content Include="dist\images\icons\button.svg" />
+    <Content Include="dist\images\icons\calculator.svg" />
+    <Content Include="dist\images\icons\calendar.svg" />
+    <Content Include="dist\images\icons\camera.svg" />
+    <Content Include="dist\images\icons\car.svg" />
+    <Content Include="dist\images\icons\card.svg" />
+    <Content Include="dist\images\icons\chair.svg" />
+    <Content Include="dist\images\icons\chat.svg" />
+    <Content Include="dist\images\icons\clipboard.svg" />
+    <Content Include="dist\images\icons\clocks.svg" />
+    <Content Include="dist\images\icons\compas.svg" />
+    <Content Include="dist\images\icons\converse.svg" />
+    <Content Include="dist\images\icons\cup.svg" />
+    <Content Include="dist\images\icons\dj.svg" />
+    <Content Include="dist\images\icons\donut.svg" />
+    <Content Include="dist\images\icons\dude.svg" />
+    <Content Include="dist\images\icons\dynamite.svg" />
+    <Content Include="dist\images\icons\earth.svg" />
+    <Content Include="dist\images\icons\egg.svg" />
+    <Content Include="dist\images\icons\eye.svg" />
+    <Content Include="dist\images\icons\file.svg" />
+    <Content Include="dist\images\icons\fit.svg" />
+    <Content Include="dist\images\icons\flag.svg" />
+    <Content Include="dist\images\icons\flask.svg" />
+    <Content Include="dist\images\icons\flower.svg" />
+    <Content Include="dist\images\icons\games.svg" />
+    <Content Include="dist\images\icons\gift-box.svg" />
+    <Content Include="dist\images\icons\girl.svg" />
+    <Content Include="dist\images\icons\goal.svg" />
+    <Content Include="dist\images\icons\google.svg" />
+    <Content Include="dist\images\icons\graph.svg" />
+    <Content Include="dist\images\icons\icecream.svg" />
+    <Content Include="dist\images\icons\imac.svg" />
+    <Content Include="dist\images\icons\ipad.svg" />
+    <Content Include="dist\images\icons\iphone.svg" />
+    <Content Include="dist\images\icons\key.svg" />
+    <Content Include="dist\images\icons\lettersymbol.svg" />
+    <Content Include="dist\images\icons\lock.svg" />
+    <Content Include="dist\images\icons\loop.svg" />
+    <Content Include="dist\images\icons\macbook.svg" />
+    <Content Include="dist\images\icons\magic.svg" />
+    <Content Include="dist\images\icons\magicmouse.svg" />
+    <Content Include="dist\images\icons\mail.svg" />
+    <Content Include="dist\images\icons\map.svg" />
+    <Content Include="dist\images\icons\medal.svg" />
+    <Content Include="dist\images\icons\mic.svg" />
+    <Content Include="dist\images\icons\money.svg" />
+    <Content Include="dist\images\icons\mortarboard.svg" />
+    <Content Include="dist\images\icons\mountain.svg" />
+    <Content Include="dist\images\icons\news.svg" />
+    <Content Include="dist\images\icons\paper-bag.svg" />
+    <Content Include="dist\images\icons\pc.svg" />
+    <Content Include="dist\images\icons\pencil.svg" />
+    <Content Include="dist\images\icons\pencils.svg" />
+    <Content Include="dist\images\icons\picture.svg" />
+    <Content Include="dist\images\icons\pig.svg" />
+    <Content Include="dist\images\icons\pills.svg" />
+    <Content Include="dist\images\icons\play.svg" />
+    <Content Include="dist\images\icons\printer.svg" />
+    <Content Include="dist\images\icons\responsive.svg" />
+    <Content Include="dist\images\icons\retina.svg" />
+    <Content Include="dist\images\icons\ribbon.svg" />
+    <Content Include="dist\images\icons\ring.svg" />
+    <Content Include="dist\images\icons\rocket.svg" />
+    <Content Include="dist\images\icons\rss.svg" />
+    <Content Include="dist\images\icons\safe.svg" />
+    <Content Include="dist\images\icons\save.svg" />
+    <Content Include="dist\images\icons\search.svg" />
+    <Content Include="dist\images\icons\settings.svg" />
+    <Content Include="dist\images\icons\shield.svg" />
+    <Content Include="dist\images\icons\shirt.svg" />
+    <Content Include="dist\images\icons\skateboard.svg" />
+    <Content Include="dist\images\icons\spray.svg" />
+    <Content Include="dist\images\icons\storage.svg" />
+    <Content Include="dist\images\icons\support.svg" />
+    <Content Include="dist\images\icons\ticket.svg" />
+    <Content Include="dist\images\icons\toilet-paper.svg" />
+    <Content Include="dist\images\icons\touch.svg" />
+    <Content Include="dist\images\icons\trash.svg" />
+    <Content Include="dist\images\icons\trip-bag.svg" />
+    <Content Include="dist\images\icons\trunk.svg" />
+    <Content Include="dist\images\icons\ubmrella.svg" />
+    <Content Include="dist\images\icons\user-interface.svg" />
+    <Content Include="dist\images\icons\video.svg" />
+    <Content Include="dist\images\icons\weather.svg" />
+    <Content Include="dist\images\icons\wi-fi.svg" />
+    <Content Include="dist\images\icons\wine.svg" />
+    <Content Include="dist\images\icons\yinyang.svg" />
+    <Content Include="dist\images\login\icon.png" />
+    <Content Include="dist\images\login\imac-2x.png" />
+    <Content Include="dist\images\login\imac.png" />
+    <Content Include="dist\images\SanPham\a58f0e4f933b42a9309fd3dd2884c606.jpg" />
+    <Content Include="dist\images\SanPham\f2119dbecd60c865fa2751c889889eae.jpg" />
+    <Content Include="dist\images\Tastemade-3.jpg" />
+    <Content Include="dist\images\tile\ribbon-2x.png" />
+    <Content Include="dist\images\tile\ribbon.png" />
+    <Content Include="dist\images\video\How To Cook Perfect Quinoa - Healthy Tip Tuesday.mp4" />
+    <Content Include="dist\images\video\poster.jpg" />
+    <Content Include="dist\index.html" />
+    <Content Include="dist\scripts\application.js" />
+    <Content Include="dist\scripts\flat-ui.js" />
+    <Content Include="dist\scripts\flat-ui.min.js" />
+    <Content Include="dist\scripts\productcard.js" />
+    <Content Include="docs\assets\css\demo.css" />
+    <Content Include="docs\assets\css\docs.css" />
+    <Content Include="docs\assets\images\carousel\image-01.jpg" />
+    <Content Include="docs\assets\images\carousel\image-02.jpg" />
+    <Content Include="docs\assets\images\carousel\image-03.jpg" />
+    <Content Include="docs\assets\images\demo\browser-2x.png" />
+    <Content Include="docs\assets\images\demo\browser-author.jpg" />
+    <Content Include="docs\assets\images\demo\browser-pic-1.jpg" />
+    <Content Include="docs\assets\images\demo\browser-pic-2.jpg" />
+    <Content Include="docs\assets\images\demo\browser-pic-3.jpg" />
+    <Content Include="docs\assets\images\demo\browser-pic-4.jpg" />
+    <Content Include="docs\assets\images\demo\browser-pic-5.jpg" />
+    <Content Include="docs\assets\images\demo\browser-pic-6.jpg" />
+    <Content Include="docs\assets\images\demo\browser.png" />
+    <Content Include="docs\assets\images\demo\html-icon.png" />
+    <Content Include="docs\assets\images\demo\logo-mask-2x.png" />
+    <Content Include="docs\assets\images\demo\logo-mask.png" />
+    <Content Include="docs\assets\images\demo\logo.png" />
+    <Content Include="docs\assets\images\demo\video.jpg" />
+    <Content Include="docs\assets\images\example-image.jpg" />
+    <Content Include="docs\assets\images\getting-started\icomoon_import.jpg" />
+    <Content Include="docs\assets\images\icons\android.svg" />
+    <Content Include="docs\assets\images\icons\android1.svg" />
+    <Content Include="docs\assets\images\icons\app-store.svg" />
+    <Content Include="docs\assets\images\icons\arrow.svg" />
+    <Content Include="docs\assets\images\icons\art.svg" />
+    <Content Include="docs\assets\images\icons\bag.svg" />
+    <Content Include="docs\assets\images\icons\basket.svg" />
+    <Content Include="docs\assets\images\icons\book.svg" />
+    <Content Include="docs\assets\images\icons\bowling.svg" />
+    <Content Include="docs\assets\images\icons\box.svg" />
+    <Content Include="docs\assets\images\icons\brush.svg" />
+    <Content Include="docs\assets\images\icons\building.svg" />
+    <Content Include="docs\assets\images\icons\bulb.svg" />
+    <Content Include="docs\assets\images\icons\button.svg" />
+    <Content Include="docs\assets\images\icons\calculator.svg" />
+    <Content Include="docs\assets\images\icons\calendar.svg" />
+    <Content Include="docs\assets\images\icons\camera.svg" />
+    <Content Include="docs\assets\images\icons\car.svg" />
+    <Content Include="docs\assets\images\icons\card.svg" />
+    <Content Include="docs\assets\images\icons\chair.svg" />
+    <Content Include="docs\assets\images\icons\chat.svg" />
+    <Content Include="docs\assets\images\icons\clipboard.svg" />
+    <Content Include="docs\assets\images\icons\clocks.svg" />
+    <Content Include="docs\assets\images\icons\compas.svg" />
+    <Content Include="docs\assets\images\icons\converse.svg" />
+    <Content Include="docs\assets\images\icons\cup.svg" />
+    <Content Include="docs\assets\images\icons\dj.svg" />
+    <Content Include="docs\assets\images\icons\donut.svg" />
+    <Content Include="docs\assets\images\icons\dude.svg" />
+    <Content Include="docs\assets\images\icons\dynamite.svg" />
+    <Content Include="docs\assets\images\icons\earth.svg" />
+    <Content Include="docs\assets\images\icons\egg.svg" />
+    <Content Include="docs\assets\images\icons\eye.svg" />
+    <Content Include="docs\assets\images\icons\file.svg" />
+    <Content Include="docs\assets\images\icons\fit.svg" />
+    <Content Include="docs\assets\images\icons\flag.svg" />
+    <Content Include="docs\assets\images\icons\flask.svg" />
+    <Content Include="docs\assets\images\icons\flower.svg" />
+    <Content Include="docs\assets\images\icons\games.svg" />
+    <Content Include="docs\assets\images\icons\gift-box.svg" />
+    <Content Include="docs\assets\images\icons\girl.svg" />
+    <Content Include="docs\assets\images\icons\goal.svg" />
+    <Content Include="docs\assets\images\icons\google.svg" />
+    <Content Include="docs\assets\images\icons\graph.svg" />
+    <Content Include="docs\assets\images\icons\icecream.svg" />
+    <Content Include="docs\assets\images\icons\imac.svg" />
+    <Content Include="docs\assets\images\icons\ipad.svg" />
+    <Content Include="docs\assets\images\icons\iphone.svg" />
+    <Content Include="docs\assets\images\icons\key.svg" />
+    <Content Include="docs\assets\images\icons\lettersymbol.svg" />
+    <Content Include="docs\assets\images\icons\lock.svg" />
+    <Content Include="docs\assets\images\icons\loop.svg" />
+    <Content Include="docs\assets\images\icons\macbook.svg" />
+    <Content Include="docs\assets\images\icons\magic.svg" />
+    <Content Include="docs\assets\images\icons\magicmouse.svg" />
+    <Content Include="docs\assets\images\icons\mail.svg" />
+    <Content Include="docs\assets\images\icons\map.svg" />
+    <Content Include="docs\assets\images\icons\medal.svg" />
+    <Content Include="docs\assets\images\icons\mic.svg" />
+    <Content Include="docs\assets\images\icons\money.svg" />
+    <Content Include="docs\assets\images\icons\mortarboard.svg" />
+    <Content Include="docs\assets\images\icons\mountain.svg" />
+    <Content Include="docs\assets\images\icons\news.svg" />
+    <Content Include="docs\assets\images\icons\paper-bag.svg" />
+    <Content Include="docs\assets\images\icons\pc.svg" />
+    <Content Include="docs\assets\images\icons\pencil.svg" />
+    <Content Include="docs\assets\images\icons\pencils.svg" />
+    <Content Include="docs\assets\images\icons\picture.svg" />
+    <Content Include="docs\assets\images\icons\pig.svg" />
+    <Content Include="docs\assets\images\icons\pills.svg" />
+    <Content Include="docs\assets\images\icons\play.svg" />
+    <Content Include="docs\assets\images\icons\printer.svg" />
+    <Content Include="docs\assets\images\icons\responsive.svg" />
+    <Content Include="docs\assets\images\icons\retina.svg" />
+    <Content Include="docs\assets\images\icons\ribbon.svg" />
+    <Content Include="docs\assets\images\icons\ring.svg" />
+    <Content Include="docs\assets\images\icons\rocket.svg" />
+    <Content Include="docs\assets\images\icons\rss.svg" />
+    <Content Include="docs\assets\images\icons\safe.svg" />
+    <Content Include="docs\assets\images\icons\save.svg" />
+    <Content Include="docs\assets\images\icons\search.svg" />
+    <Content Include="docs\assets\images\icons\settings.svg" />
+    <Content Include="docs\assets\images\icons\shield.svg" />
+    <Content Include="docs\assets\images\icons\shirt.svg" />
+    <Content Include="docs\assets\images\icons\skateboard.svg" />
+    <Content Include="docs\assets\images\icons\spray.svg" />
+    <Content Include="docs\assets\images\icons\storage.svg" />
+    <Content Include="docs\assets\images\icons\support.svg" />
+    <Content Include="docs\assets\images\icons\ticket.svg" />
+    <Content Include="docs\assets\images\icons\toilet-paper.svg" />
+    <Content Include="docs\assets\images\icons\touch.svg" />
+    <Content Include="docs\assets\images\icons\trash.svg" />
+    <Content Include="docs\assets\images\icons\trip-bag.svg" />
+    <Content Include="docs\assets\images\icons\trunk.svg" />
+    <Content Include="docs\assets\images\icons\ubmrella.svg" />
+    <Content Include="docs\assets\images\icons\user-interface.svg" />
+    <Content Include="docs\assets\images\icons\video.svg" />
+    <Content Include="docs\assets\images\icons\weather.svg" />
+    <Content Include="docs\assets\images\icons\wi-fi.svg" />
+    <Content Include="docs\assets\images\icons\wine.svg" />
+    <Content Include="docs\assets\images\icons\yinyang.svg" />
+    <Content Include="docs\assets\images\login\icon.png" />
+    <Content Include="docs\assets\images\login\imac-2x.png" />
+    <Content Include="docs\assets\images\login\imac.png" />
+    <Content Include="docs\assets\images\tile\ribbon-2x.png" />
+    <Content Include="docs\assets\images\tile\ribbon.png" />
+    <Content Include="docs\assets\images\video\poster.jpg" />
+    <Content Include="docs\assets\js\application.js" />
+    <Content Include="docs\assets\js\prettify.js" />
+    <Content Include="docs\components.html" />
+    <Content Include="docs\examples\buttons.html" />
+    <Content Include="docs\examples\dropdowns.html" />
+    <Content Include="docs\examples\fileinput.html" />
+    <Content Include="docs\examples\forms.html" />
+    <Content Include="docs\examples\navbar-fixed-top.html" />
+    <Content Include="docs\examples\navbar-static-top.html" />
+    <Content Include="docs\examples\navbars-with-elements.html" />
+    <Content Include="docs\examples\pagination.html" />
+    <Content Include="docs\examples\radiocheck.html" />
+    <Content Include="docs\examples\select.html" />
+    <Content Include="docs\examples\switches.html" />
+    <Content Include="docs\examples\tagsinput.html" />
+    <Content Include="docs\examples\thumbnails.html" />
+    <Content Include="docs\examples\tiles.html" />
+    <Content Include="docs\examples\timepicker.html" />
+    <Content Include="docs\examples\todo-list.html" />
+    <Content Include="docs\examples\typography.html" />
+    <Content Include="docs\examples\vertical-slider.html" />
+    <Content Include="docs\favicon.ico" />
+    <Content Include="docs\getting-started.html" />
+    <Content Include="docs\template.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="dist\fonts\glyphicons\flat-ui-pro-icons-regular.eot" />
+    <Content Include="dist\fonts\glyphicons\flat-ui-pro-icons-regular.ttf" />
+    <Content Include="dist\fonts\glyphicons\flat-ui-pro-icons-regular.woff" />
+    <Content Include="dist\fonts\glyphicons\selection.json" />
+    <Content Include="dist\fonts\lato\lato-black.eot" />
+    <Content Include="dist\fonts\lato\lato-black.ttf" />
+    <Content Include="dist\fonts\lato\lato-black.woff" />
+    <Content Include="dist\fonts\lato\lato-bold.eot" />
+    <Content Include="dist\fonts\lato\lato-bold.ttf" />
+    <Content Include="dist\fonts\lato\lato-bold.woff" />
+    <Content Include="dist\fonts\lato\lato-bolditalic.eot" />
+    <Content Include="dist\fonts\lato\lato-bolditalic.ttf" />
+    <Content Include="dist\fonts\lato\lato-bolditalic.woff" />
+    <Content Include="dist\fonts\lato\lato-italic.eot" />
+    <Content Include="dist\fonts\lato\lato-italic.ttf" />
+    <Content Include="dist\fonts\lato\lato-italic.woff" />
+    <Content Include="dist\fonts\lato\lato-light.eot" />
+    <Content Include="dist\fonts\lato\lato-light.ttf" />
+    <Content Include="dist\fonts\lato\lato-light.woff" />
+    <Content Include="dist\fonts\lato\lato-regular.eot" />
+    <Content Include="dist\fonts\lato\lato-regular.ttf" />
+    <Content Include="dist\fonts\lato\lato-regular.woff" />
+    <Content Include="docs\assets\css\demo.css.map" />
+    <Content Include="docs\assets\css\docs.css.map" />
+    <Content Include="docs\assets\css\src\docs.less" />
+    <Content Include="docs\assets\css\src\prettyprint.less" />
+    <EntityDeploy Include="Models\AChanDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AChanDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AChanDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AChanDB.edmx</DependentUpon>
+      <LastGenOutput>AChanDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AChanDB.edmx.diagram">
+      <DependentUpon>AChanDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\AChanDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AChanDB.edmx</DependentUpon>
+      <LastGenOutput>AChanDB.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Tutorial.cshtml" />
+    <Content Include="Views\Home\Travel.cshtml" />
+    <Content Include="Views\Home\Signin.cshtml" />
+    <Content Include="Views\Home\Items.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>15889</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:15889/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,88 @@
+﻿@using A_chan_website.Models;
+@model List<SanPham>
+@{
+    ViewBag.Title = "Items";
+    int count = 0;
+    
+}
+
+<div class="row" style="display:inline">
+    <ol class="breadcrumb" style="display: -webkit-inline-box">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" style="display: inline-flex">Items</li>
+    </ol>
+</div>
+
+
+
+@{
+    foreach (var item in Model)
+    {
+          
+
+              if(count%2==0)
+          {
+              <div class="blog-card">
+    <div class="meta">
+      <div class="photo" style="background-image: url(@Url.Content("~/dist/images/SanPham/"+ item.hinhanh)"></div>
+      <ul class="details">
+        <li class="author"><span class="fui-user"><a href="#"> John Doe</a></span></li>
+        <li class="date"><span class="fui-calendar"> Aug. 24, 2015</span></li>
+        <li class="tags">
+            
+          <ul>
+              <a href="#"> </a><li><span class="fui-tag"> <a href="#">Learn</a></span></li>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>@item.tenSP</h1>
+      <h2>Opening a door to the future</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+    </div>
+  </div>
+              count++;
+          }
+                else
+                {
+                  <div class="blog-card alt">
+    <div class="meta">
+        <div class="photo" style="background-image: url(@Url.Content("~/dist/images/SanPham/"+ item.hinhanh)"></div>
+        <ul class="details">
+            <li class="author"><span class="fui-user"><a href="#"> John Doe</a></span></li>
+            <li class="date"><span class="fui-calendar"> Aug. 24, 2015</span></li>
+            <li class="tags">
+
+                <ul>
+                    <a href="#"> </a>
+                    <li><span class="fui-tag"> <a href="#">Learn</a></span></li>
+                    <li><a href="#">Code</a></li>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="description">
+      <h1>@item.tenSP</h1>
+      <h2>Java is not the same as JavaScript</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+    </div>
+  </div>
+                 count++;
+                }
+        
+} 
+}
+
+
