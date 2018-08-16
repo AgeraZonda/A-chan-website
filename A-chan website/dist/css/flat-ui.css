@@ -4889,7 +4889,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: white;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li  {
   color: #1abc9c;
   background-color: transparent;
 }
@@ -4938,7 +4938,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   border-bottom-color: #4b6075;
 }
 
-.navbar-inverse .navbar-nav .dropdown-toggle:hover:after, .navbar-inverse .navbar-nav .dropdown-toggle:focus:after {
+.navbar-inverse .navbar-nav .dropdown-toggle:hover:after, .navbar-inverse .navbar-nav  {
   border-top-color: #1abc9c;
   border-bottom-color: #1abc9c;
 }

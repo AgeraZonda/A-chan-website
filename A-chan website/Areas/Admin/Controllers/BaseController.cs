@@ -1,0 +1,25 @@
+﻿using A_chan_website.Common;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Routing;
+namespace A_chan_website.Areas.Admin.Controllers
+{
+    public class BaseController : Controller
+    {
+        //
+        // GET: /Admin/Base/
+        protected override void OnActionExecuted(ActionExecutedContext filterContext)
+        {
+            var sess = Session[CommonConstants.USER_SESSION];
+            if(sess ==null)
+            {
+                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Login",action = "Index", Area = "Admin"}));
+           
+            }
+            base.OnActionExecuted(filterContext);
+        }
+	}
+}

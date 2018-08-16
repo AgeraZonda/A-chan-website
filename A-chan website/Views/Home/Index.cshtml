@@ -1,12 +1,11 @@
 ﻿@{
     ViewBag.Title = "My Healthy";
 }
-   <div class="backcarosel">
-</div>
+  
 <div class="carouselwrapper">
     <span class="fui-arrow-left"></span>
     <span class="fui-arrow-right"></span>
-    <a href="#fakelink" class="btnwelcome btn btn-block btn-lg btn-inverse">Get Started</a>
+    <a href="#fakelink" class="btnwelcome btn-block btn-lg" style="text-align:center;">Get Started</a>
     <h4 class="lead">Recipes and tips for a healthy lifestyle</h4>
     <div class="carousel">
         <input type="radio" id="carousel-1" name="carousel[]" checked>
@@ -39,93 +38,95 @@
     </div>
 
 </div>
-<div class="row demo-samples">
-    <div class="col-4">
-        <div class="todo">
-            <div class="todo-search">
-                <input class="todo-search-field" type="search" value="" placeholder="Search" />
-            </div>
-            <ul>
-                <li class="todo-done">
-                    <div class="todo-icon fui-user"></div>
-                    <div class="todo-content">
-                        <h4 class="todo-name">
-                            Video1
-                        </h4>
-                        Description 1
-                    </div>
-                </li>
-                <li>
-                    <div class="todo-icon fui-list"></div>
-                    <div class="todo-content">
-                        <h4 class="todo-name">
-                          Video2
-                        </h4>
-                       Description 2
-                    </div>
-                </li>
-                <li>
-                    <div class="todo-icon fui-eye"></div>
-                    <div class="todo-content">
-                        <h4 class="todo-name">
-                           Video3
-                        </h4>
-                        Description 3
-                    </div>
-                </li>
-                <li>
-                    <div class="todo-icon fui-time"></div>
-                    <div class="todo-content">
-                        <h4 class="todo-name">
-                            Video4
-                        </h4>
-                        Description 4
-                    </div>
-                </li>
-            </ul>
-        </div><!-- /.todo -->
-    </div><!-- /.col-4 -->
-    <div class="col-8">
-        <video id="my-player"
-               class="video-js"
-               controls
-               preload="auto"
-               poster="docs/assets/images/video/poster.jpg"
-               data-setup='{}'>
-          
-            <source src="~/dist/images/video/How%20To%20Cook%20Perfect%20Quinoa%20-%20Healthy%20Tip%20Tuesday.mp4" type="video/mp4"></source>
-            <source src="http://iurevych.github.com/Flat-UI-videos/big_buck_bunny.webm" type="video/webm"></source>
-            <p class="vjs-no-js">
-                To view this video please enable JavaScript, and consider upgrading to a
-                web browser that
-                <a href="http://videojs.com/html5-video-support/" target="_blank">
-                    supports HTML5 video
-                </a>
-            </p>
-        </video>
-    </div> <!-- /video -->
-</div>
+<div class="container">
+    <div class="row demo-samples">
+        <div class="col-4">
+            <div class="todo">
+                <div class="todo-search">
+                    <input class="todo-search-field" type="search" value="" placeholder="Search" />
+                </div>
+                <ul>
+                    <li class="todo-done">
+                        <div class="todo-icon fui-user"></div>
+                        <div class="todo-content">
+                            <h4 class="todo-name">
+                                Video1
+                            </h4>
+                            Description 1
+                        </div>
+                    </li>
+                    <li>
+                        <div class="todo-icon fui-list"></div>
+                        <div class="todo-content">
+                            <h4 class="todo-name">
+                                Video2
+                            </h4>
+                            Description 2
+                        </div>
+                    </li>
+                    <li>
+                        <div class="todo-icon fui-eye"></div>
+                        <div class="todo-content">
+                            <h4 class="todo-name">
+                                Video3
+                            </h4>
+                            Description 3
+                        </div>
+                    </li>
+                    <li>
+                        <div class="todo-icon fui-time"></div>
+                        <div class="todo-content">
+                            <h4 class="todo-name">
+                                Video4
+                            </h4>
+                            Description 4
+                        </div>
+                    </li>
+                </ul>
+            </div><!-- /.todo -->
+        </div><!-- /.col-4 -->
+        <div class="col-8">
+            <video id="my-player"
+                   class="video-js"
+                   controls
+                   preload="auto"
+                   poster="docs/assets/images/video/poster.jpg"
+                   data-setup='{}'>
 
-<div class="login">
-    <div class="login-screen">
-        <div class="login-icon">
-            <div><img src="~/docs/assets/images/icons/clipboard.svg" alt="Clipboard"></div>
-            <h4>Welcome to <small>My HealThy</small></h4>
-        </div>
+                <source src="~/dist/images/video/How%20To%20Cook%20Perfect%20Quinoa%20-%20Healthy%20Tip%20Tuesday.mp4" type="video/mp4"></source>
+                <source src="http://iurevych.github.com/Flat-UI-videos/big_buck_bunny.webm" type="video/webm"></source>
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a
+                    web browser that
+                    <a href="http://videojs.com/html5-video-support/" target="_blank">
+                        supports HTML5 video
+                    </a>
+                </p>
+            </video>
+        </div> <!-- /video -->
+    </div>
 
-        <div class="login-form">
-            <div class="form-group">
-                <input type="text" class="form-control login-field" value="" placeholder="Enter your name" id="login-name" />
-                <label class="login-field-icon fui-user" for="login-name"></label>
+    <div class="login">
+        <div class="login-screen">
+            <div class="login-icon">
+                <div><img src="~/docs/assets/images/icons/clipboard.svg" alt="Clipboard"></div>
+                <h4>Welcome to <small>My HealThy</small></h4>
             </div>
 
-            <div class="form-group">
-                <input type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass" />
-                <label class="login-field-icon fui-lock" for="login-pass"></label>
-            </div>
+            <div class="login-form">
+                <div class="form-group">
+                    <input type="text" class="form-control login-field" value="" placeholder="Enter your name" id="login-name" />
+                    <label class="login-field-icon fui-user" for="login-name"></label>
+                </div>
 
-            <a class="btn btn-primary btn-lg btn-block" href="#">Log in</a>
-            <a class="login-link" href="#">Lost your password?</a>
+                <div class="form-group">
+                    <input type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass" />
+                    <label class="login-field-icon fui-lock" for="login-pass"></label>
+                </div>
+
+                <a class="btn btn-primary btn-lg btn-block" href="#">Log in</a>
+                <a class="login-link" href="#">Lost your password?</a>
+            </div>
         </div>
     </div>
 </div>

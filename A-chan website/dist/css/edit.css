@@ -161,7 +161,9 @@
   padding: 0;
   list-style-type: none;
   width: 100%;
-  height: 375px;
+  height: 625px;
+  margin: 19% 0%;
+  margin-left: 22%;
   position: relative;
 }
 .carousel__item {
@@ -431,12 +433,6 @@ footer {
 }
 .loginbtn{
 
-    padding: 3px 8px;
-    background-color: #2f4154;
-    border: 2px solid #16A085;
-    border-color: #16A085;
-
-    box-shadow: none;
-
+  
 
 }
